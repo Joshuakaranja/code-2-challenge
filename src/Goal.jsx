@@ -82,7 +82,15 @@ function Goal() {
   const fetchGoals = async () => {
     try {
       setLoading(true)
-      const response = await fetch(API_URL)
+      // Add timeout to prevent long waits
+      const controller = new AbortController()
+      const timeoutId = setTimeout(() => controller.abort(), 10000) // 10 second timeout
+      
+      const response = await fetch(API_URL, { 
+        signal: controller.signal 
+      })
+      clearTimeout(timeoutId)
+      
       if (!response.ok) {
         throw new Error('Failed to fetch goals')
       }
@@ -90,7 +98,11 @@ function Goal() {
       setGoals(data)
       setError(null)
     } catch (err) {
-      setError('Error loading goals. Please try again later.')
+      if (err.name === 'AbortError') {
+        setError('Request timed out. The server might be starting up, please try again.')
+      } else {
+        setError('Error loading goals. Please try again later.')
+      }
       console.error('Error fetching goals:', err)
     } finally {
       setLoading(false)

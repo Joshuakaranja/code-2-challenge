@@ -94,3 +94,291 @@ form button:hover {
 form button:active {
   transform: translateY(0);
 }
+/* 
+/* Goals List Styles 
+.goals-list {
+  margin-top: 2rem;
+}
+
+.goals-list h2 {
+  color: #2c3e50;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.goals-list > p {
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  margin: 3rem 0;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  border: 2px dashed #bdc3c7;
+}
+
+.goal-item {
+  background: white;
+  border: 1px solid #e1e8ed;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  
+  position: relative;
+  overflow: hidden;
+}
+
+.goal-item:hover {
+  
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.goal-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(135deg, #3498db, #2ecc71);
+}
+
+.goal-item h3 {
+  margin: 0 0 1rem 0;
+  color: #2c3e50;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.goal-item p {
+  margin: 0.75rem 0;
+  color: #555;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.goal-item p:first-of-type {
+  font-weight: 600;
+  color: #27ae60;
+}
+
+/* Progress Bar Styles
+.progress-bar {
+  width: 100%;
+  height: 24px;
+  background-color: #ecf0f1;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 1.5rem;
+  position: relative;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #3498db, #2ecc71);
+  transition: width 0.6s ease;
+  border-radius: 12px;
+  position: relative;
+  min-width: 4px;
+}
+
+.progress::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+Loading and Error States 
+.loading {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  background: white;
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+
+.error {
+  background: #fee;
+  border: 1px solid #fcc;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.error p {
+  color: #c0392b;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.error button {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.error button:hover {
+  background: #c0392b;
+}
+
+Goal Item Enhancements 
+.goal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.delete-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+  transform: scale(1.1);
+}
+
+.goal-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.goal-details p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+}
+
+.progress-section {
+  margin-top: 1rem;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.progress-info span:last-child {
+  color: #27ae60;
+  font-weight: 600;
+}
+
+ Amount Controls 
+.amount-controls {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ecf0f1;
+}
+
+.amount-controls label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #34495e;
+  font-size: 0.9rem;
+}
+
+.amount-input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 2px solid #e1e8ed;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #fafbfc;
+}
+
+.amount-input:focus {
+  outline: none;
+  border-color: #27ae60;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
+}
+
+ Responsive Design 
+@media (max-width: 768px) {
+  .App {
+    padding: 1rem;
+  }
+  
+  .App h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  form {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .goal-item {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .goals-list h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding: 0.5rem;
+  }
+  
+  .App h1 {
+    font-size: 1.8rem;
+  }
+  
+  form {
+    padding: 1rem;
+  }
+  
+  form input {
+    padding: 0.8rem;
+  }
+  
+  .goal-item {
+    padding: 1rem;
+  }
+} */
