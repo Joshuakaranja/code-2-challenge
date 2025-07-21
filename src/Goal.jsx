@@ -90,7 +90,7 @@ function Goal() {
       setGoals(data)
       setError(null)
     } catch (err) {
-      setError('Error loading goals. Make sure to run: npm run server')
+      setError('Error loading goals. Please try again later.')
       console.error('Error fetching goals:', err)
     } finally {
       setLoading(false)
@@ -115,7 +115,7 @@ function Goal() {
       setGoals(prevGoals => [...prevGoals, createdGoal])
       setError(null)
     } catch (err) {
-      setError('Error adding goal. Make sure json-server is running.')
+      setError('Error adding goal. Please try again later.')
       console.error('Error adding goal:', err)
     }
   }
