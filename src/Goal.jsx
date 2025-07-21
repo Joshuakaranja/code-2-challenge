@@ -72,7 +72,7 @@ function Goal() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
-  const API_URL = "https://json-server-books-1.onrender.com"
+  const API_URL = "https://json-server-books-1.onrender.com/goals"
 
   // Fetch goals from db.json on component mount
   useEffect(() => {
