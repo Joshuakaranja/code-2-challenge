@@ -7,7 +7,11 @@
 ## Description  
 The **Financial Goals Tracker** is a user-friendly web application built with React, allowing users to create, manage, and track multiple financial goals. Users can define goals such as a "Travel Fund" or "Emergency Fund," set target amounts, make deposits, and view visual progress.  
 
-The application uses `json-server` to simulate a backend with full Create, Read, Update, and Delete (CRUD) capabilities. It offers a responsive and clean interface suitable for beginner to mid-level users.
+The application uses a JSON server hosted on Render to provide full Create, Read, Update, and Delete (CRUD) capabilities. It offers a responsive and clean interface suitable for beginner to mid-level users.
+
+## 🌐 Live API
+The JSON server is deployed and accessible at:  
+**API URL:** [https://json-server-books-1.onrender.com/goals](https://json-server-books-1.onrender.com/goals)
 
 ---
 
@@ -26,21 +30,16 @@ cd code-2-challenge
 npm install
 ```
 
-### 3. Start the JSON Server (for data persistence)  
-```bash
-npm run server
-```
-> This starts `json-server` on `http://localhost:3001` and watches `db.json`.
-
-### 4. Start the development server (in a new terminal)  
+### 3. Start the development server  
 ```bash
 npm run dev
 ```
-> This starts the React app on `http://localhost:5173`.
+> This starts the React app, typically on `http://localhost:5173` or `http://localhost:5174`
 
-### 5. Open the app in your browser  
-Navigate to:  
-[http://localhost:5173](http://localhost:5173)
+### 4. Open the app in your browser  
+Navigate to the URL shown in your terminal (usually [http://localhost:5173](http://localhost:5173))
+
+> **Note:** No need to run a local JSON server! The app connects directly to the hosted API on Render.
 
 ---
 
