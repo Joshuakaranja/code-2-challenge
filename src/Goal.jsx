@@ -234,16 +234,8 @@ function Goal() {
               </div>
               
               <div className="progress-section">
-                <div className="progress-info">
-                  <span>Progress: ${goal.savedAmount} / ${goal.targetAmount}</span>
-                  <span>{Math.round((goal.savedAmount / goal.targetAmount) * 100)}%</span>
-                </div>
-                
-                <div className="progress-bar">
-                  <div 
-                    className="progress" 
-                    style={{ width: `${(goal.savedAmount / goal.targetAmount) * 100}%` }}
-                  ></div>
+                <div className="progress-percentage">
+                  {Math.round((goal.savedAmount / goal.targetAmount) * 100)}% Complete
                 </div>
                 
                 <div className="amount-controls">
