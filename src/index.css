@@ -94,8 +94,8 @@ form button:hover {
 form button:active {
   transform: translateY(0);
 }
-/* 
-/* Goals List Styles 
+
+/* Goals List Styles */
 .goals-list {
   margin-top: 2rem;
 }
@@ -126,13 +126,11 @@ form button:active {
   padding: 2rem;
   margin-bottom: 1.5rem;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  
   position: relative;
   overflow: hidden;
 }
 
 .goal-item:hover {
-  
   box-shadow: 0 8px 25px rgba(0,0,0,0.1);
 }
 
@@ -166,7 +164,7 @@ form button:active {
   color: #27ae60;
 }
 
-/* Progress Bar Styles
+/* Progress Bar Styles */
 .progress-bar {
   width: 100%;
   height: 24px;
@@ -203,7 +201,7 @@ form button:active {
   100% { transform: translateX(100%); }
 }
 
-Loading and Error States 
+/* Loading and Error States */
 .loading {
   text-align: center;
   padding: 3rem;
@@ -244,7 +242,7 @@ Loading and Error States
   background: #c0392b;
 }
 
-Goal Item Enhancements 
+/* Goal Item Enhancements */
 .goal-header {
   display: flex;
   justify-content: space-between;
@@ -302,7 +300,7 @@ Goal Item Enhancements
   font-weight: 600;
 }
 
- Amount Controls 
+/* Amount Controls */
 .amount-controls {
   margin-top: 1rem;
   padding-top: 1rem;
@@ -334,7 +332,7 @@ Goal Item Enhancements
   box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
 }
 
- Responsive Design 
+/* Responsive Design */
 @media (max-width: 768px) {
   .App {
     padding: 1rem;
@@ -381,4 +379,4 @@ Goal Item Enhancements
   .goal-item {
     padding: 1rem;
   }
-} */
+}

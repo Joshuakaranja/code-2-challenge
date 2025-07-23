@@ -72,7 +72,7 @@ function Goal() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
-  const API_URL = "https://json-server-books-1.onrender.com/goals"
+  const API_URL = "https://json-server-code-2-2.onrender.com/goals"
 
   // Fetch goals from db.json on component mount
   useEffect(() => {
@@ -84,7 +84,7 @@ function Goal() {
       setLoading(true)
       // Add timeout to prevent long waits
       const controller = new AbortController()
-      const timeoutId = setTimeout(() => controller.abort(), 10000) // 10 second timeout
+      const timeoutId = setTimeout(() => controller.abort(), 30000) // 30 second timeout for Render
       
       const response = await fetch(API_URL, { 
         signal: controller.signal 
